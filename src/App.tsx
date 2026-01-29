@@ -26,7 +26,7 @@ export default function App() {
       },
       {
         accessorKey: "studentName",
-        header: "姓名",
+        header: "名前",
         cell: (info) => info.getValue<string>(),
         size: 180,
       },
@@ -38,13 +38,13 @@ export default function App() {
       },
       {
         accessorKey: "grade",
-        header: "年级",
+        header: "学年",
         cell: (info) => info.getValue<number>(),
         size: 80,
       },
       {
         accessorKey: "score",
-        header: "分数",
+        header: "スコア",
         cell: (info) => info.getValue<number>(),
         size: 80,
       },
@@ -113,8 +113,8 @@ export default function App() {
       <h2 style={{ margin: "0 0 12px" }}>Students（TanStack Table + Virtual）</h2>
 
       <div style={{ display: "flex", gap: 12, alignItems: "center", marginBottom: 12 }}>
-        <span>接口：/api/students</span>
-        <span>总条数：{data.length}</span>
+        <span>API：/api/students</span>
+        <span>総件数：{data.length}</span>
         {loading && <span>加载中...</span>}
         {error && <span style={{ color: "crimson" }}>错误：{error}</span>}
       </div>
@@ -220,7 +220,7 @@ export default function App() {
       </div>
 
       <p style={{ marginTop: 12, color: "#666" }}>
-        说明：即使后端返回 5 万条，这里也只渲染可视区域的行，滚动依然流畅。
+        説明：バックエンドが5万件返しても、ここでは表示領域の行だけをレンダリングするため、スクロールは滑らかです。
       </p>
     </div>
   );

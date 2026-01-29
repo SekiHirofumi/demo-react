@@ -4,8 +4,10 @@ import react from "@vitejs/plugin-react";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/demo-react/",
+  // base: "/demo-react/",
   server: {
+    host: true,
+    allowedHosts: true,
     proxy: {
       // 前端请求 /api/** 会被转发到后端
       "/api": {
